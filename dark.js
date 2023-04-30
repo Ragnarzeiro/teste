@@ -1,14 +1,14 @@
 <script>
-  var darkMode = false;
+  var modeToggleBtn = document.getElementById('mode-toggle-btn');
+  var body = document.body;
+
   function toggleMode() {
-    var body = document.querySelector("body");
-    darkMode = !darkMode;
-    if(darkMode) {
-      body.classList.add("dark-mode");
-      document.getElementById("mode-toggle-btn").textContent = "Modo Claro";
+    if (body.classList.contains('dark-mode')) {
+      body.classList.remove('dark-mode');
+      modeToggleBtn.innerText = 'Modo Escuro';
     } else {
-      body.classList.remove("dark-mode");
-      document.getElementById("mode-toggle-btn").textContent = "Modo Escuro";
+      body.classList.add('dark-mode');
+      modeToggleBtn.innerText = 'Modo Claro';
     }
   }
 </script>
